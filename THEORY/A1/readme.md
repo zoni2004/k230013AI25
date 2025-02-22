@@ -123,7 +123,7 @@ This AI Service Agent would enhance efficiency, reduce response time, and optimi
 ### OUTPUT
 ![image](https://github.com/user-attachments/assets/763ba7a0-0cb6-4033-88d5-657fa708fda4)
 ### COMPARISON
-# 🇷🇴 Romania Map Search Algorithms 🚀
+# Romania Map Search Algorithms 🚀
 
 This project implements **four search algorithms** to find the optimal path between cities in Romania.  
 Users can select a **source** and **destination**, and the program will return the path and cost for each algorithm.
