@@ -120,6 +120,6 @@ This AI Service Agent would enhance efficiency, reduce response time, and optimi
 **Example:** A sorting algorithm agent (e.g., Merge Sort) is rational in two different environments: sorting numbers in ascending order and sorting them in descending order (with slight modifications).
 
 ## QUESTION 5
-OUTPUT
+### OUTPUT
 ![image](https://github.com/user-attachments/assets/763ba7a0-0cb6-4033-88d5-657fa708fda4)
 
