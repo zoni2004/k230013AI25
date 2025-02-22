@@ -123,25 +123,6 @@ This AI Service Agent would enhance efficiency, reduce response time, and optimi
 ### OUTPUT
 ![image](https://github.com/user-attachments/assets/763ba7a0-0cb6-4033-88d5-657fa708fda4)
 ### COMPARISON
-# Romania Map Search Algorithms 🚀
-
-This project implements **four search algorithms** to find the optimal path between cities in Romania.  
-Users can select a **source** and **destination**, and the program will return the path and cost for each algorithm.
-
-## 📍 Problem Description
-We are given a **simplified map of Romania** with cities as **nodes** and road distances as **edges**.  
-The goal is to find the most **efficient** way to travel between two cities using different search strategies.
-
-## 🔍 Implemented Search Algorithms
-1️⃣ **Breadth-First Search (BFS)** - Explores level-by-level, ensuring the shortest path in terms of steps.  
-2️⃣ **Uniform Cost Search (UCS)** - Expands the least-cost node first, ensuring the **optimal path**.  
-3️⃣ **Greedy Best-First Search (GBFS)** - Chooses the node closest to the goal using a **heuristic function**.  
-4️⃣ **Iterative Deepening Depth-First Search (IDDFS)** - Combines **DFS** and **BFS** for efficient memory usage.  
-
----
-
-## 📊 🔬 Algorithm Performance Comparison
-
 | Algorithm  | Complete? | Optimal? | Time Complexity | Space Complexity | Best Use Case |
 |------------|----------|----------|----------------|-----------------|--------------|
 | **BFS**    | ✅ Yes   | ✅ Yes (if uniform cost) | **O(b^d)** | **O(b^d)** | Best for shortest path (step count) |
