@@ -62,10 +62,19 @@ An AI Service Agent assists students by handling support tickets, managing agent
 #### **Environment Characteristics**
 
 - **Accessible vs. Inaccessible** → **Accessible**
+  The agent has full access to ticket details, agent availability, response times, and historical resolution data.
+
 - **Deterministic vs. Stochastic** → **Partially Deterministic**
+  While ticket assignments and processing follow rules, student behavior and response times introduce uncertainty.
+
 - **Episodic vs. Sequential** → **Sequential**
+  Each ticket’s resolution depends on previous interactions, making it a sequential environment.
+
 - **Static vs. Dynamic** → **Dynamic**
+  The system state changes as new tickets arrive, agents get reassigned, and priorities shift dynamically.
+
 - **Discrete vs. Continuous** → **Discrete**
+  Ticket statuses, agent assignments, and priority levels are finite and discrete.
 
 #### **Best Agent Architecture**
 A **Hybrid AI Agent** combining:
@@ -80,9 +89,34 @@ This AI Service Agent would enhance efficiency, reduce response time, and optimi
 ## QUESTION 4
 
 1. **An agent that senses only partial information about the state cannot be perfectly rational.** → **False**
+- A partially observable environment does not necessarily prevent an agent from acting perfectly rationally.
+- A rational agent maximizes its expected performance based on the available information.
+**Example:** A chess-playing AI does not have full observability of an opponent’s internal strategy but can still play optimally based on the visible board state.
 2. **There exist task environments in which no pure reflex agent can behave rationally.** → **True**
+- A pure reflex agent acts solely based on the current perception and ignores history.
+= In some environments, decision-making requires memory or reasoning about the future.
+**Example:** A maze navigation agent must remember past moves to avoid loops. A pure reflex agent, which reacts only to the current location, may get stuck.
+
 3. **There exists a task environment in which every agent is rational.** → **False**
+- Rationality depends on an agent’s performance measure, perception, and available actions.
+- In some environments, irrational agents can exist, meaning not every agent is rational.
+**Counterexample:** A random-moving chess bot in a competitive setting is not rational compared to a minimax chess AI.
+
 4. **The input to an agent program is the same as the input to the agent function.** → **False**
+- The agent function is a mathematical mapping from percept histories to actions.
+- The agent program is the actual implementation running on hardware.
+**Example:** A robot vacuum cleaner's agent function might map sensor inputs to movement commands, but the agent program includes low-level processing like obstacle detection.
+
 5. **Every agent function is implementable by some program/machine combination.** → **False**
+- The space of all possible agent functions is infinitely large, but computers have finite memory and processing power.
+**Counterexample:** Consider an agent function that maps every possible infinite percept history to unique actions. No finite machine can implement this fully.
+
 6. **Suppose an agent selects its action uniformly at random. There exists a deterministic task environment in which this agent is rational.** → **True**
+- If the environment is designed so that any action leads to the same optimal outcome, a random agent can be rational.
+**Example:** A lottery ticket selection agent in an environment where all tickets have the same winning probability. Since no action is better than another, random selection is rational.
+
 7. **It is possible for a given agent to be perfectly rational in two distinct task environments.** → **True**
+- If an agent’s strategy maximizes performance in two different environments, it is rational in both.
+**Example:** A sorting algorithm agent (e.g., Merge Sort) is rational in two different environments: sorting numbers in ascending order and sorting them in descending order (with slight modifications).
+
+
