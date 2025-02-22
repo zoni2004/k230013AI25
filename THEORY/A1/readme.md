@@ -122,4 +122,49 @@ This AI Service Agent would enhance efficiency, reduce response time, and optimi
 ## QUESTION 5
 ### OUTPUT
 ![image](https://github.com/user-attachments/assets/763ba7a0-0cb6-4033-88d5-657fa708fda4)
+### COMPARISON
+# 🇷🇴 Romania Map Search Algorithms 🚀
 
+This project implements **four search algorithms** to find the optimal path between cities in Romania.  
+Users can select a **source** and **destination**, and the program will return the path and cost for each algorithm.
+
+## 📍 Problem Description
+We are given a **simplified map of Romania** with cities as **nodes** and road distances as **edges**.  
+The goal is to find the most **efficient** way to travel between two cities using different search strategies.
+
+## 🔍 Implemented Search Algorithms
+1️⃣ **Breadth-First Search (BFS)** - Explores level-by-level, ensuring the shortest path in terms of steps.  
+2️⃣ **Uniform Cost Search (UCS)** - Expands the least-cost node first, ensuring the **optimal path**.  
+3️⃣ **Greedy Best-First Search (GBFS)** - Chooses the node closest to the goal using a **heuristic function**.  
+4️⃣ **Iterative Deepening Depth-First Search (IDDFS)** - Combines **DFS** and **BFS** for efficient memory usage.  
+
+---
+
+## 📊 🔬 Algorithm Performance Comparison
+
+| Algorithm  | Complete? | Optimal? | Time Complexity | Space Complexity | Best Use Case |
+|------------|----------|----------|----------------|-----------------|--------------|
+| **BFS**    | ✅ Yes   | ✅ Yes (if uniform cost) | **O(b^d)** | **O(b^d)** | Best for shortest path (step count) |
+| **UCS**    | ✅ Yes   | ✅ Yes   | **O(b^(1 + ⌊C*/ε⌋))** | **O(b^(1 + ⌊C*/ε⌋))** | Best for least-cost paths |
+| **GBFS**   | ✅ Yes (loops possible) | ❌ No  | **O(b^m)** | **O(b^m)** | Fast but heuristic-dependent |
+| **IDDFS**  | ✅ Yes   | ✅ Yes (if cost = depth) | **O(b^d)** | **O(bd)** | Best for limited memory |
+
+Where:  
+- `b` = Branching Factor  
+- `d` = Depth of the shallowest goal  
+- `C*` = Cost of the optimal solution  
+- `ε` = Smallest edge cost  
+
+---
+
+## 📍 Example Run (Arad → Bucharest)
+
+| Algorithm | Path Taken | Path Cost |
+|-----------|-----------|-----------|
+| **BFS**   | `Arad → Sibiu → Fagaras → Bucharest` | **450** |
+| **UCS**   | `Arad → Sibiu → Rimnicu Vilcea → Pitesti → Bucharest` | **418** ✅ (Optimal) |
+| **GBFS**  | `Arad → Sibiu → Fagaras → Bucharest` | **450** |
+| **IDDFS** | `Arad → Sibiu → Fagaras → Bucharest` | **450** |
+
+**✅ UCS is the best choice for optimal cost**.  
+**❌ GBFS is not optimal due to heuristic dependency**.  
